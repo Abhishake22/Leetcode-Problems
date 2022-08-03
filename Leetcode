@@ -42,3 +42,12 @@ Return the result table in any order.
 SELECT product_id
 FROM products
 WHERE low_fats = 'Y' AND recyclable = 'Y'
+
+
+5. 1484. Group Sold Products By The Date
+
+
+SELECT sell_date,COUNT(DISTINCT product) as num_sold, group_concat(DISTINCT product) as Products
+FROM Activities
+Group by sell_date
+order by sell_date
