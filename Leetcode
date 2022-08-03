@@ -16,3 +16,18 @@ join Logs l2
 ON l1.id = l2.id+1 AND l1.num = l2.num
 join Logs l3
 ON l1.id = l3.id+2 AND l1.num = l3.num
+
+
+3. Easy
+
+Write an SQL query to report the names of the customer that are not referred by the customer with id = 2.
+
+Return the result table in any order.
+
+The query result format is in the following example.
+
+ 
+SELECT name
+FROM customer
+where referee_id <> 2 OR referee_id IS NULL
+
