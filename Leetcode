@@ -51,3 +51,13 @@ SELECT sell_date,COUNT(DISTINCT product) as num_sold, group_concat(DISTINCT prod
 FROM Activities
 Group by sell_date
 order by sell_date
+
+
+
+6. 196. Delete Duplicate Emails
+
+
+
+DELETE p1
+FROM person p1,person p2
+WHERE p1.email = p2.email AND p1.id > p2.id
